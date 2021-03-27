@@ -1,0 +1,67 @@
+.header {
+	position: absolute;
+	width: 100%;
+	z-index: 100;
+	padding-top: 3.3rem;
+	&#{__row}{
+		@include fast_flex();
+		justify-content: center;
+		align-items: center;
+	}
+	&#{__menu}{
+		width: 80%;
+	}
+	&#{__logo}{
+		position: absolute;
+		left: 50%;
+		top: 1.05rem;;
+		@include transform(-50%);
+	}
+}
+.menu {
+	&#{__icon}{}
+	&#{__body}{}
+	&#{__list}{}
+	&#{__link}{}
+}
+.icon-menu {
+		display: block;
+		position: fixed;
+		top: 1.6rem;
+		right: 4%;
+		height: 21px;
+		cursor: pointer;
+		z-index: 101;
+		span{
+			display: inline-block;
+			width: 30px;
+			height: 3px;
+			margin-top: 9px;
+			background-color: $color_text_alternate;
+			@include anim(0.2s, 0s);
+			&::after{
+				content:"";
+				top: 0;
+				width: 30px;
+				height: 3px;
+				background-color: $color_text_alternate;
+				position: absolute;
+			}
+			&::before{
+				bottom: 0;
+				content:"";
+				width: 30px;
+				height: 3px;
+				background-color: $color_text_alternate;
+				position: absolute;
+			}
+		}
+		&.active{
+			span{
+				//@include scale(0px);
+				&::after{@include rotate(-45deg); top: 8px; background-color: $white; @include anim(0.2s, 0s);}
+				&::before{@include rotate(45deg); top:8px; background-color: $white; @include anim(0.2s, 0s);}
+			}
+		}
+	}
+}

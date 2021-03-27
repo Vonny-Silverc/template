@@ -1,19 +1,148 @@
-<!-- Основоной html файл проэкта -->
 <!DOCTYPE html>
-<html lang="ru">
-	<head>
-		<!--Кодировка страницы и настройка viewport-->
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<!--Название сайта-->
-		<title>Document</title>
-		<!--Подключение стилей-->
-		<link rel="stylesheet" href="css/style.css">
-		<!--Подключение JavaScript и Jquery-->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-		<script src="js/main.js"></script>
-	</head>
-	<body>
-		
-	</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="page">
+        <header class="header">
+          <div class="header__row">
+            <nav class="header__menu menu">
+              <div class="menu__icon icon-menu"><span></span></div>
+              <div class="menu__body">
+                <ul class="menu__list">
+                  <li><a class="menu__link" href="#about_us">about us</a></li>
+                  <li><a class="menu__link" href="#work">work</a></li>
+                  <li><a class="menu__link" href="#shop">shop</a></li>
+                  <li><a class="menu__link" href="#contact">contact</a></li>
+                </ul>
+              </div>
+            </nav>
+            <div class="header__logo"><img src="images/logo@2x.png" alt="logo"></div>
+          </div>
+          <div class="container">
+            <section class="header-screen">
+              <div class="header-screen__bg ibg"><img src="images/top_bg@2x.jpg" alt="bicycle"></div>
+            </section>
+          </div>
+        </header>
+        <main class="content">
+          <section class="generation" id="about_us">
+            <div class="generation__block block">
+              <div class="block__icon"><img src="images/icons/icon@2x.png" alt="About us"></div>
+              <h1 class="block__title">A NEW GENERATION OF VINTAGE BIKE</h1>
+              <div class="block__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </div>
+            </div>
+          </section>
+          <section class="work" id="work">
+            <div class="work__row">
+              <article class="work__column work__column_big"><a class="work__item item"><span class="item__logo"><img src="images/icons/bicycle@2x.png" alt="bicycle company icon"></span><span class="item__image ibg"><img src="images/bg/bicycle_company_bg@2x.jpg" alt="bicycle image"></span></a></article>
+              <article class="work__column">
+                <div class="work__content block">
+                  <div class="block__icon"><img src="images/icons/vintage_oliva@2x.png" alt="vintage oliva icon"></div>
+                  <h2 class="block__title">vintage Oliva</h2>
+                  <div class="block__text block__text_justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.</div>
+                </div>
+                <div class="work__image ibg"><img src="images/bg/vintage_oliva_bg@2x.jpg" alt="vintage oliva image"></div>
+              </article>
+            </div>
+            <div class="work__row work__row_rev">
+              <article class="work__column work__column_big"><a class="work__item item"><span class="item__logo"><img src="images/icons/vintage@2x.png" alt="vintage icon"></span><span class="item__image ibg"><img src="images/bg/vintage_bg@2x.jpg" alt="vintage bicycle image"></span></a></article>
+              <article class="work__column">
+                <div class="work__content block">
+                  <div class="block__icon"><img src="images/icons/la_boriosa@2x.png" alt="la boriosa icon"></div>
+                  <h2 class="block__title">La Boriosa</h2>
+                  <div class="block__text block__text_justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.</div>
+                </div>
+                <div class="work__image ibg"><img src="images/bg/la_boriosa_bg@2x.jpg" alt="la boriosa image"></div>
+              </article>
+            </div>
+            <div class="work__row">
+              <article class="work__column"><a class="work__item item"><span class="item__logo"><img src="images/icons/since_1926@2x.png" alt="since 1926 icon"></span><span class="item__image ibg"><img src="images/bg/since_1926_1_bg@2x.jpg" alt="since 1926 first image"></span></a></article>
+              <article class="work__column work__column_first">
+                <div class="work__content block">
+                  <div class="block__icon"><img src="images/icons/retro_bike@2x.png" alt="retro bike icon"></div>
+                  <h2 class="block__title">retrò Bike - M. Hulot</h2>
+                  <div class="block__text block__text_justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.</div>
+                </div>
+                <div class="work__image ibg"><img src="images/bg/retro_bike_bg@2x.jpg" alt="retro bike image"></div>
+              </article>
+              <article class="work__column"><a class="work__item item"><span class="item__logo"><img src="images/icons/since_1926@2x.png" alt="since 1926 icon"></span><span class="item__image ibg"><img src="images/bg/since_1926_2_bg@2x.jpg" alt="since 1926 second image"></span></a></article>
+            </div>
+          </section>
+          <section class="slider container_slider">
+            <div class="block">
+              <div class="slider__body">
+                <div class="slider__item">
+                  <div class="slider__icon"><img src="images/icons/twitter_icon@2x.png" alt="twitter icon"></div>
+                  <h2 class="slider__title">AOD New York  @aod  <span>/  35 min</span>
+                    <p class="slider__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.</p>
+                  </h2>
+                </div>
+                <div class="slider__item">
+                  <div class="slider__icon"><img src="images/icons/twitter_icon@2x.png" alt="twitter icon"></div>
+                  <h2 class="slider__title">AOD New York  @aod  <span>/  35 min</span></h2>
+                  <p class="slider__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="slider__item">
+                  <div class="slider__icon"><img src="images/icons/twitter_icon@2x.png" alt="twitter icon"></div>
+                  <h2 class="slider__title">AOD New York  @aod  <span>/  35 min</span></h2>
+                  <p class="slider__text">Nulla pulvinar gravida nisi, a tincidunt dolor dapibus vel. Phasellus suscipit finibus lacinia. Sed tempor sapien vitae orci gravida tincidunt. Nam quis rutrum nisl. Mauris augue quam, vestibulum eget mollis sit amet, congue sed velit. Nullam luctus ut arcu ut venenatis. Phasellus tellus augue, imperdiet vitae arcu ac, vehicula dictum neque. Nullam id dignissim lorem</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="shop" id="shop">
+            <div class="shop__body">
+              <div class="shop__block block">
+                <div class="block__row"><a class="block__item item"><span class="item__logo"><img src="images/icons/shop_icon@2x.png" alt="bicycle company icon"><span>Shop now</span></span><span class="item__image ibg"><img src="images/bg/shop_bg_1@3x.jpg" alt="bicycle image"></span></a><a class="block__item item"><span class="item__logo"><img src="images/icons/shop_icon@2x.png" alt="bicycle company icon"><span>Shop now</span></span><span class="item__image ibg"><img src="images/bg/shop_bg_2@3x.jpg" alt="bicycle image"></span></a></div>
+                <div class="block__row"><a class="block__item block__item_long item"><span class="item__logo"><img src="images/icons/shop_icon@2x.png" alt="bicycle company icon"><span>Shop now</span></span><span class="item__image ibg"><img src="images/bg/shop_bg_3@3x.jpg" alt="bicycle image"></span></a></div>
+              </div>
+              <div class="shop__block block">
+                <div class="block__row"><a class="block__item item"><span class="item__logo"><img src="images/icons/shop_icon@2x.png" alt="bicycle company icon"><span>Shop now</span></span><span class="item__image ibg"><img src="images/bg/shop_bg_4@3x.jpg" alt="bicycle image"></span></a><a class="block__item item"><span class="item__logo"><img src="images/icons/shop_icon@2x.png" alt="bicycle company icon"><span>Shop now</span></span><span class="item__image ibg"><img src="images/bg/shop_bg_5@3x.jpg" alt="bicycle image"></span></a></div>
+              </div>
+              <div class="shop__block block">
+                <div class="block__row"><a class="block__item block__item_long item"><span class="item__logo"><img src="images/icons/shop_icon@2x.png" alt="bicycle company icon"><span>Shop now</span></span><span class="item__image ibg"><img src="images/bg/shop_bg_6@3x.jpg" alt="bicycle image"></span></a></div>
+                <div class="block__row"><a class="block__item item"><span class="item__logo"><img src="images/icons/shop_icon@2x.png" alt="bicycle company icon"><span>Shop now</span></span><span class="item__image ibg"><img src="images/bg/shop_bg_7@3x.jpg" alt="bicycle image"></span></a><a class="block__item item"><span class="item__logo"><img src="images/icons/shop_icon@2x.png" alt="bicycle company icon"><span>Shop now</span></span><span class="item__image ibg"><img src="images/bg/shop_bg_8@3x.jpg" alt="bicycle image"></span></a></div>
+              </div>
+            </div>
+            <div class="shop__footer"><a class="shop__btn">DISCOVER THE SHOP</a></div>
+          </section>
+          <section class="contact" id="contact">
+            <div class="contact__block block">
+              <div class="block__icon"><img src="images/logo@2x.png" alt="logo"></div>
+              <p class="block__title">Stay on the saddle!</p>
+              <form class="block__form form" action="#" method="POST" name="email_form">
+                <input class="form__email" type="email" name="email" placeholder="enter your email...">
+                <button class="form__button" type="submit" name="GO">go</button>
+              </form>
+            </div>
+          </section>
+          <footer class="footer">
+            <div class="footer__row row">
+              <div class="row__block row__block_left">
+                <div class="row__block-text text">
+                  <h3 class="text__title">AOD New York</h3>
+                  <p>2250 Lexington Avenue </p>
+                  <p>New York, NY 10035  - info@domain.com</p>
+                </div>
+              </div>
+              <div class="row__block"><a class="row__block-icons" href="#"><img src="images/icons/twitter_icons.png" alt="Link to Twitter"></a><a class="row__block-icons" href="#"><img src="images/icons/faceboock_icon.png" alt="Link to Faceboock"></a><a class="row__block-icons" href="#"><img src="images/icons/pick_icon.png" alt="Link to Pick"></a></div>
+              <div class="row__block row__block_right">
+                <div class="row__block-text"> 
+                  <p>Handcrafted by</p>
+                </div><img src="images/icons/y-e-b-o_icon@2x.png" alt="y-e-b-o logo">
+              </div>
+            </div>
+          </footer>
+        </main>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="js/script.js"></script>
 </html>
