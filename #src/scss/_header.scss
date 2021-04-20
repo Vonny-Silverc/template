@@ -1,67 +1,62 @@
-.header {
-	position: absolute;
-	width: 100%;
-	z-index: 100;
-	padding-top: 3.3rem;
-	&#{__row}{
-		@include fast_flex();
-		justify-content: center;
-		align-items: center;
-	}
-	&#{__menu}{
-		width: 80%;
-	}
-	&#{__logo}{
-		position: absolute;
-		left: 50%;
-		top: 1.05rem;;
-		@include transform(-50%);
-	}
-}
-.menu {
-	&#{__icon}{}
-	&#{__body}{}
-	&#{__list}{}
-	&#{__link}{}
-}
+//Стили шапки сайта------------------------------------------------------------
+
 .icon-menu {
+	margin: auto;
+	display: grid;
+	place-items: center;
+	width: 30px;
+	height: 27px;
+	cursor: pointer;
+	overflow: hidden;
+	z-index: 1500;
+	@include anim(0.2s, 0.1s);
+	span {
 		display: block;
-		position: fixed;
-		top: 1.6rem;
-		right: 4%;
-		height: 21px;
-		cursor: pointer;
-		z-index: 101;
-		span{
-			display: inline-block;
-			width: 30px;
-			height: 3px;
-			margin-top: 9px;
-			background-color: $color_text_alternate;
-			@include anim(0.2s, 0s);
-			&::after{
-				content:"";
-				top: 0;
-				width: 30px;
-				height: 3px;
-				background-color: $color_text_alternate;
-				position: absolute;
-			}
-			&::before{
-				bottom: 0;
-				content:"";
-				width: 30px;
-				height: 3px;
-				background-color: $color_text_alternate;
-				position: absolute;
-			}
+		width: 30px;
+		height: 3px;
+		background-color: $color_bg_5;
+		border-radius: 15%;
+		justify-self: center;
+		@include anim(0.2s, 0.1s);
+		&:nth-child(1){
+			width: 26px;
 		}
-		&.active{
-			span{
-				//@include scale(0px);
-				&::after{@include rotate(-45deg); top: 8px; background-color: $white; @include anim(0.2s, 0s);}
-				&::before{@include rotate(45deg); top:8px; background-color: $white; @include anim(0.2s, 0s);}
+		&:nth-child(2){
+			width: 20px;
+		}
+	}
+	&:hover{
+		span {
+			background-color: $color_text_3;
+			&:nth-child(1){
+				width: 30px;
+			}
+			&:nth-child(2){
+				width: 30px;
 			}
 		}
 	}
+	&.active {
+		span {
+			&:nth-child(1) {
+				width: 30px;
+				transform-origin: center center;
+				transform: rotate(135deg) translate(23%, -206%);
+				//@include rotate(135deg);
+				//@include translate3d(0, 3px);
+				//@include translate3d(-20%, 500%);
+			}
+			&:nth-child(2) {
+				width: 0px;
+			}
+			&:nth-child(3) {
+				transform-origin: center center;
+				transform: rotate(45deg) translate(-20%, -184%);
+				//@include rotate(45deg);
+				//@include translate3d(0, -3px);
+				//@include translate3d(-20%, -500%);
+			}
+		}
+	}
+	
 }

@@ -1,29 +1,42 @@
-// Стандартный набор брейкпойнтов----------------------------------------------
+// Стандартный набор брейкпойнтов mobile_first---------------------------------
 	// Только принтеры=========================================================
 	@mixin for-print-only {
-		@media print { @content; }
-	}
-	// Только телефон==========================================================
-	@mixin for-phone-only {
-		@media (max-width: 576px) { @content; }
+		@media print { @content;}
 	}
 	// Планшет портрет и более=================================================
 	@mixin for-tablet-portrait-up {
-		@media (min-width: 768px) { @content; }
+		@media (min-width: 768px) { @content;}
 	}
 	// Планшет альбом и маленький монитор======================================
 	@mixin for-tablet-landscape-and-mini-desktop-up {
-		@media (min-width: 992px) { @content; }
+		@media (min-width: 992px) { @content;}
 	}
 	// Обычные мониторы========================================================
 	@mixin for-desktop-up {
-		@media (min-width: 1200px) { @content; }
+		@media (min-width: 1200px) { @content;}
 	}
 	// Большие мониторы========================================================
 	@mixin for-big-desktop-up {
-		@media (min-width: 1400px) { @content; }
+		@media (min-width: 1400px) { @content;}
 	}
-//-----------------------------------------------------------------------------
+// Стандартный набор брейкпойнтов desktop_first--------------------------------
+	// Средние мониторы и менее================================================
+	@mixin for-middle-desktop {
+		@media (max-width: 1202px) {@content;}
+	}
+	// Малые мониторы, планшеты альбом и менее=================================
+	@mixin for-mini-desktop-and-landscape-tablet-less {
+		@media (max-width: 994px) {@content;}
+	}
+	// Планшеты портретный и менее=============================================
+	@mixin for-portrait-tablet-less {
+		@media (max-width: 770px) {@content;}
+	}
+	// Только телефон==========================================================
+	@mixin for-phone-only {
+		@media (max-width: 576px) { @content;}
+	}
+//----------------------------------------------------------------
 
 //inline-block wrapper---------------------------------------------------------
 	@mixin inline-block-wrapper {
@@ -61,15 +74,6 @@
 		display: flex;
 		@content;
 	}
-	// Дополнительные настройки для flexbox====================================
-	@mixin flex-setting($flex-direction : row, $flex-wrap: wrap, $content : space-between, $align-items : flex-start,$align-content : flex-start) {
-		flex-direction: $flex-direction;
-		flex-wrap: $flex-wrap;
-		justify-content: $content;
-		align-content: $align-content;
-		align-items: $align-items;
-		@content;
-	}
 	//Настройка элемента в flex контейнере=======================================
 	@mixin flex-elem($grow:0, $shrink:1, $basis:100%) {
 		flex: $grow $shrink $basis;
@@ -85,7 +89,7 @@
 	}
 	//Быстрые паддинги=========================================================
 	@mixin padding($top:0, $right:0, $bottom:0, $left:0) {
-		padding: #{$top}% #{$right}% #{$bottom}% #{$left}%;
+		padding: #{$top}+"em" #{$right}+"%" #{$bottom}+"em" #{$left}+"%";
 	}
 
 //-----------------------------------------------------------------------------
@@ -130,10 +134,10 @@
 		@content;
 	}
 	//Стрелка==================================================================
-	@mixin arrow($width:1rem,$arrow_width:.1rem, $color:$black, $direction){
+	@mixin arrow($width:1rem, $arrow_width:1rem, $color:$black, $direction){
 		width: $width;
 		height: $width;
-		@mixin rotate(45deg);
+		@include rotate(45deg);
 		
 		@if $direction == top {
 			border-left: $arrow_wight solid $color;

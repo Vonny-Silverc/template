@@ -1,0 +1,32 @@
+.slick-slider{
+	position: relative;
+	.slick-track, .slick-list {}
+	.slick-list { overflow: hidden;}
+	.slick-track{
+		@include fast_flex(); 
+		align-items: flex-start;
+	}
+	.slick-slide{}
+	.slick-dots{
+		@include fast_flex() {
+			justify-content: center;
+			align-items: center;
+		}
+		li{
+			button{
+				font-size: 0;
+			}
+			&.slick-active{
+				button{
+				
+				}
+			}
+		}
+	}
+}
+
+.slider {
+	&__body {}
+	&__item {}
+	&__element {}
+}

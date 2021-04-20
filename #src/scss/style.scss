@@ -1,8 +1,8 @@
 @import "_fonts";//Подключение шрифтов
 @import "_variables";//Переменные
 @import "_reset";//Обнудяющие стили
-@import "_extends";//Расширения
 @import "_mixin";//Примеси
+@import "_extends";//Расширения
 //Оболочка---------------------------------------------------------------------
 .wrapper {
 	overflow: hidden;
@@ -11,29 +11,19 @@
 }
 //-----------------------------------------------------------------------------
 //Контейнер--------------------------------------------------------------------
-//.container{
-	//position: absolute;
-	//width: 100%;
-	//height: 100vh;
-	//top: 0;
-	//left: 0;
-	//z-index: -50;
-	//@include fast_flex();	
+//.container{	
 //}
 
-//На случай неообхоимости отступа от шапки сайта
+//Общие стили-----------------------------------------------------------------
 //.content{
-//	position: absolute;
-//	top: 100vh;
-//}
-//-----------------------------------------------------------------------------
-// Стили класса block-----------------------------------------------------------
-//.block {
-
 //}
 //-----------------------------------------------------------------------------
 //Подключение файлов стилей страниц и элементов--------------------------------
-@import "_ui";
+//@import "../apps/ibg/_ibg";
+//@import "../apps/slick_slider/_slick-slider";
+//@import "../apps/responsive_image_gallery/scss/_responsive-gallery";
+//@import "../apps/thumbnail_grid_gallery/ThumbnailGridExpandingPreview/scss/_thumb-gallery";
+//@import "../apps/gamma-gallery/scss/_gamma-gallery.scss";
 @import "_header";
 @import "_main";
 @import "_footer";
