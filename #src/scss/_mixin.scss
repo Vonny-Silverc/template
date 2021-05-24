@@ -1,5 +1,5 @@
-// Стандартный набор брейкпойнтов mobile_first---------------------------------
-	// Только принтеры=========================================================
+// Standard set of breakpoints mobile_first------------------------------------
+	// Only print==============================================================
 	@mixin for-print-only {
 		@media print { @content;}
 	}
@@ -19,7 +19,7 @@
 	@mixin for-big-desktop-up {
 		@media (min-width: 1400px) { @content;}
 	}
-// Стандартный набор брейкпойнтов desktop_first--------------------------------
+// Standard set of breakpoints desktop_first-----------------------------------
 	// Средние мониторы и менее================================================
 	@mixin for-middle-desktop {
 		@media (max-width: 1202px) {@content;}
@@ -72,7 +72,6 @@
 		display: -ms-flexbox;
 		display: -o-flex;
 		display: flex;
-		@content;
 	}
 	//Настройка элемента в flex контейнере=======================================
 	@mixin flex-elem($grow:0, $shrink:1, $basis:100%) {

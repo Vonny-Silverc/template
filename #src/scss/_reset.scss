@@ -4,7 +4,7 @@
 :focus,:active{outline: none !important;}
 a:focus,a:active{outline: none !important;}
 nav,footer,header,aside, section{display: block;}
-html,body{height: 100%;width: 100%; min-width: $min_width;}
+html,body{height: 100%;width: 100%; min-width: $min_width_1;}
 body {line-height: 1; font-size: $base_font_size; font-family: $font_family; -ms-text-size-adjust: 100%; -moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
 input, button, textarea{font-family: $font_family;}
 input::-ms-clear{display: none;}

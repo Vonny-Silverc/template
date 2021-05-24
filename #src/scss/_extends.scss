@@ -1,2 +1,19 @@
-//Расширения для блоков---------------------------------------------------
-//В данный файл необходимо вписывать повторяющиеся блоки кода например before и after
+//File for duplicate code extensions-------------------------------------------
+
+%after_line{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	width: 35%;
+	height: 0.15em;
+	background-color: $color_bg_4;
+}
+
+%before_line{
+	content: "";
+	position: absolute;
+	top: 0;
+	width: 35%;
+	height: 0.15em;
+	background-color: $color_bg_4;
+}

@@ -7,23 +7,22 @@
 .wrapper {
 	overflow: hidden;
 	min-height: 100%;
-	max-width: 1100px;
+	//max-width: 1100px;
 }
 //-----------------------------------------------------------------------------
 //Контейнер--------------------------------------------------------------------
-//.container{	
-//}
+.container{
+	width: 100%;
+}
 
 //Общие стили-----------------------------------------------------------------
-//.content{
-//}
+.content{
+}
 //-----------------------------------------------------------------------------
 //Подключение файлов стилей страниц и элементов--------------------------------
-//@import "../apps/ibg/_ibg";
+@import "../apps/ibg/_ibg";
+@import "../apps/responsive_gallery/scss/responsive-gallery";
 //@import "../apps/slick_slider/_slick-slider";
-//@import "../apps/responsive_image_gallery/scss/_responsive-gallery";
-//@import "../apps/thumbnail_grid_gallery/ThumbnailGridExpandingPreview/scss/_thumb-gallery";
-//@import "../apps/gamma-gallery/scss/_gamma-gallery.scss";
 @import "_header";
 @import "_main";
 @import "_footer";
