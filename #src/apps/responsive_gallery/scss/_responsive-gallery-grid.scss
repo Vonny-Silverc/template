@@ -1,0 +1,106 @@
+.gallery{
+	position: relative;
+	padding: 0;
+	&-list{
+		position: relative;
+		@include fast-grid();
+		grid-template-columns: repeat(auto-fit, minmax(249px, 25%));
+		grid-template-rows: 25vw;
+		grid-auto-rows: 25vw;
+		overflow: hidden;
+		font-size: 0;
+		margin-top: 0;
+
+		@include for-mini-desktop-and-landscape-tablet-less{
+			grid-template-columns: repeat(auto-fit, minmax(256px, 33.3%));
+			grid-template-rows: 33vw;
+			grid-auto-rows: 33vw;
+		}
+
+		@include for-portrait-tablet-less{
+			grid-template-columns: repeat(auto-fit, minmax(288px, 50%));
+			grid-auto-columns: 1fr;
+			grid-template-rows: 50vw;
+			grid-auto-rows: 50vw;
+		}
+
+		@include for-phone-only{
+			grid-template-columns: repeat(auto-fit, minmax(250px, 100%));
+			grid-template-rows: 70vw;
+			grid-auto-rows: 70vw;
+		}
+	}
+
+	&-item{
+		display: block;
+		position: relative;
+		width: 100%;
+		height: 25vw;
+		@include fast-grid();
+		grid-template: 1fr / 1fr;
+		justify-content: center;
+		align-items: center;
+
+		&:nth-child(n+9){
+			display: none;
+			.opnd_g{
+				display: block;
+			}
+		}
+
+
+		&-hover{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			@include fast-grid();
+			-moz-justify-content: center;
+			-webkit-justify-content: center;
+			justify-content: center;
+			-webkit-align-items: center;
+			align-items: center;
+			background-color: rgba($color: $color_bg_4, $alpha: 0.7);
+			opacity: 0;
+			color: #fff;
+			font-size: $base_font_size;
+			z-index: 500;
+			@include anim(0.5s, 0.2s, opacity, ease);
+
+			img{
+				display: block;
+				width: 100%;
+				height: auto;
+				overflow: hidden;
+			}
+		}
+
+
+
+		&:hover {
+			.gallery-item-hover{ opacity: 1;}
+		}
+
+		& > img{
+			display: block;
+			width: 100%;
+			object-fit: cover;
+			//max-width: 100%;
+			height: 100%;
+			@include anim(0.5s, 0.2s);
+		}
+		@include for-mini-desktop-and-landscape-tablet-less{
+			height: 33vw;
+		}
+
+		@include for-portrait-tablet-less{
+			height: 50vw;
+		}
+
+		@include for-phone-only{
+			height: 70vw;
+		}
+
+	}
+}
