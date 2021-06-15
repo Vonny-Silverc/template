@@ -20,10 +20,12 @@
 }
 //-----------------------------------------------------------------------------
 //Подключение файлов стилей страниц и элементов--------------------------------
-@import "../apps/ibg/_ibg";
+//@import "../apps/ibg/_ibg";
 //@import "../apps/responsive_gallery/scss/responsive-gallery-flex";
 //@import "../apps/responsive_gallery/scss/responsive-gallery-grid";
 //@import "../apps/slick_slider/_slick-slider";
+//@import "../apps/expand_button/scss/_expand-button";
+
 @import "_header";
 @import "_main";
 @import "_footer";
