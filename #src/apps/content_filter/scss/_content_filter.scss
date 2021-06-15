@@ -1,0 +1,42 @@
+.filter-class {
+	@include fast-flex();
+	width: 80%;
+	&__list {
+		flex-basis: 100%;
+		@include fast-flex();
+		-moz-justify-content: center;
+		-webkit-justify-content: center;
+		justify-content: center;
+		flex-wrap: wrap;
+
+	}
+	&__link{
+		padding: 0.5em 0;
+		&:not(:last-child){
+			margin-right: 5%;
+		}
+	}
+	&__button {
+		font-size: $font_size_5;
+		font-weight: 600;
+		line-height: 1.09;
+		min-width: 150px;
+		letter-spacing: 0.013125em;
+		color: #000000b3;
+		text-transform: uppercase;
+		&.active{
+			color: $color_text_6;
+		}
+		@include for-mini-desktop-and-landscape-tablet-less{
+			font-size: $font_size_mobile_5;
+		}
+	}
+
+	@include for-phone-only{
+		width: 100%;
+	}
+}
+
+._invisible{
+	display: none;
+}
