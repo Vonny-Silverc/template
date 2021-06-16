@@ -1,0 +1,159 @@
+.form-feedback {
+	font-size: $font_size_desktop_4;
+	grid-area: form;
+	@include fast-grid();
+	grid-template: 
+		"name	name	name	name	email	email	email	email" 3em
+		"title	title	title	title	title	title	title	title" 3em
+		"messag	messag	messag	messag	messag	messag	messag	messag" 10.625em
+		"...	...		...		btn		btn		...		...		..." 3.375em
+		/1fr	1fr		1fr		1.08fr	1.08fr	1fr		1fr		1fr
+	;
+	grid-gap: 1.875em;
+	
+	&__item {
+		&:nth-child(1){grid-area: name;}
+		&:nth-child(2){grid-area: email;}
+		&:nth-child(3){grid-area: title;}
+		&:nth-child(4){grid-area: messag;}
+		&:nth-child(5){grid-area: btn;}
+	}
+
+	&__label {
+		display: none;
+	}
+
+	&__field {
+		width: 100%;
+		height: 100%;
+		padding: 1.125em 1.25em;
+		font-family: $font_family_1;
+		font-size: $font_size_desktop_5;
+		line-height: 1.6;
+		letter-spacing: 0.009375em;
+		text-align: left;
+		color: $color_text_6;
+		&::-webkit-input-placeholder {
+			font-family: $font_family_1;
+			font-size: $font_size_desktop_5;
+			line-height: 1.6;
+			letter-spacing: 0.009375em;
+			text-align: left;
+			color: $color_text_6;
+		}
+		&:-moz-placeholder { 
+			font-family: $font_family_1;
+			font-size: $font_size_desktop_5;
+			line-height: 1.6;
+			letter-spacing: 0.009375em;
+			text-align: left;
+			color: $color_text_6;
+			opacity: 1;
+		}
+		&::-moz-placeholder {
+			font-family: $font_family_1;
+			font-size: $font_size_desktop_5;
+			line-height: 1.6;
+			letter-spacing: 0.009375em;
+			text-align: left;
+			color: $color_text_6;
+			opacity: 1;
+		}
+		&:-ms-input-placeholder { 
+			font-family: $font_family_1;
+			font-size: $font_size_desktop_5;
+			line-height: 1.6;
+			letter-spacing: 0.009375em;
+			text-align: left;
+			color: $color_text_6;
+		}
+		&::-ms-input-placeholder { 
+			font-family: $font_family_1;
+			font-size: $font_size_desktop_5;
+			line-height: 1.6;
+			letter-spacing: 0.009375em;
+			text-align: left;
+			color: $color_text_6;
+		}
+		&::placeholder {
+			font-family: $font_family_1;
+			font-size: $font_size_desktop_5;
+			line-height: 1.6;
+			letter-spacing: 0.009375em;
+			text-align: left;
+			color: $color_text_6;
+		}
+
+		//&_comment{}
+	}
+
+	&__button {
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-color: $color_bg_4;
+		font-size: $font_size_desktop_6;
+		font-weight: bold;
+		letter-spacing: 0.075em;
+		text-align: center;
+		text-transform: uppercase;
+		color: $color_text_1;
+		@include anim(0.3s);
+		&:hover{
+			background-color: $color_bg_10;
+		}
+	}
+}
+
+@include for-portrait-tablet-less{
+	.form-feedback{
+		font-size: $font_size_tablet_4;
+		grid-template: 
+			"name	name	name	name	email	email	email	email" 3em
+			"title	title	title	title	title	title	title	title" 3em
+			"messag	messag	messag	messag	messag	messag	messag	messag" 10.625em
+			"...	...		btn		btn		btn		btn		...		..." 3.375em
+			/1fr	1fr		1fr		1.08fr	1.08fr	1fr		1fr		1fr
+		;
+		grid-gap: 1.375em;
+		
+		&__field{
+			font-size: $font_size_tablet_5;
+			&::-webkit-input-placeholder{font-size: $font_size_tablet_5;}
+			&:-moz-placeholder{font-size: $font_size_tablet_5;}
+			&::-moz-placeholder{font-size: $font_size_tablet_5;}
+			&:-ms-input-placeholder{font-size: $font_size_tablet_5;}
+			&::-ms-input-placeholder{font-size: $font_size_tablet_5;}
+			&::placeholder{font-size: $font_size_tablet_5;}
+		}
+
+		&__button{font-size: $font_size_tablet_6;}
+	}
+}
+
+@include for-phone-only {
+	.form-feedback{
+		font-size: $font_size_mobile_4;
+		grid-template: 
+			"name	name	name	name	name	name	name	name" 3em
+			"email	email	email	email	email	email	email	email" 3em
+			"title	title	title	title	title	title	title	title" 3em
+			"messag	messag	messag	messag	messag	messag	messag	messag" 10.625em
+			"btn	btn		btn		btn		btn		btn		btn		btn	" 3.375em
+			/1fr	1fr		1fr		1.08fr	1.08fr	1fr		1fr		1fr
+		;
+		grid-gap: 1.375em;
+
+		&__field{
+			font-size: $font_size_mobile_5;
+			&::-webkit-input-placeholder{font-size: $font_size_mobile_5;}
+			&:-moz-placeholder{font-size: $font_size_mobile_5;}
+			&::-moz-placeholder{font-size: $font_size_mobile_5;}
+			&:-ms-input-placeholder{font-size: $font_size_mobile_5;}
+			&::-ms-input-placeholder{font-size: $font_size_mobile_5;}
+			&::placeholder{font-size: $font_size_mobile_5;}
+		}
+
+		&__button{font-size: $font_size_mobile_6;}
+	}
+}

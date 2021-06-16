@@ -44,25 +44,21 @@ document.addEventListener('DOMContentLoaded', function () {
 			if (input.classList.contains('_name')) {
 				if (nameTest(input)) {
 					formAddError(input);
-					alert("Введенное имя некорректно. Допустимы только латинские и русские буквы, а так же символ пробел и дифис.");
 					error++;
 				}
 			} else if (input.classList.contains('_email')) {
 				if (emailTest(input)) {
 					formAddError(input);
-					alert("Введенный почтовый адресс некорректен. Пожалуйста убедитесь, что в адресе есть '@' и '.'.");
 					error++;
 				}
 
 			} else if (input.classList.contains('_number')) {
 				if (numberTest(input)) {
 					formAddError(input);
-					alert("Введенный номер телефона некорректен. Пожалуйста убедитесь в том, что номер записан верно");
 					error++;
 				}
 			} else if (input.getAttribute("type") === "checkbox" && input.checked === false) {
 				formAddError(input);
-				alert("Для отправки необходимо поставить галочку согласия с обработкой персональных данных");
 				error++;
 			} else {
 				if (input.value === '') {

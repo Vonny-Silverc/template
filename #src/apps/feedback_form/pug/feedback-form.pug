@@ -1,0 +1,16 @@
+form(action="/" method="POST").class__form.form-feedback
+	div.form-feedback__item
+		label(for="user-Name").form-feedback__label user-Name
+		input(type="text" name="Name" placeholder="user Name")#user-Name.form-feedback__field
+	div.form-feedback__item
+		label(for="user-Email").form-feedback__label user-Email
+		input(type="email" name="email" placeholder="user Email")#user-Email.form-feedback__field
+	div.form-feedback__item
+		label(for="user-Title").form-feedback__label user Title
+		input(type="text" name="title" placeholder="user Title")#user-Title.form-feedback__field
+	div.form-feedback__item
+		label(for="user-Comment").form-feedback__label user Comment
+		textarea(name="Comment" placeholder="user Comment" style="resize: none;")#user-Comment.form-feedback__field.form-feedback__field_comment
+	div.form-feedback__item
+		label(for="send-message").form-feedback__label send message
+		button(type="submit" placeholder="send message")#send-message.form-feedback__button send message

@@ -4,10 +4,22 @@
 @import "_mixin";//Примеси
 @import "_extends";//Расширения
 //Оболочка---------------------------------------------------------------------
-.wrapper {
-	overflow: hidden;
+//.wrapper {
+//	overflow: hidden;
+//	min-height: 100%;
+//	max-width: 1100px;
+//}
+
+.grid-box{
+	overflow-x: hidden;
+	position: relative;
 	min-height: 100%;
-	//max-width: 1100px;
+	@include fast-grid();
+	grid-template: 
+		"main"
+		"footer"
+		/ 1fr
+	;
 }
 //-----------------------------------------------------------------------------
 //Контейнер--------------------------------------------------------------------
@@ -16,16 +28,9 @@
 }
 
 //Общие стили-----------------------------------------------------------------
-.content{
-}
+//.content{
+//}
 //-----------------------------------------------------------------------------
-//Подключение файлов стилей объектов и элементов--------------------------------
-//@import "../apps/ibg/_ibg";
-//@import "../apps/responsive_gallery/scss/responsive-gallery-flex";
-//@import "../apps/responsive_gallery/scss/responsive-gallery-grid";
-//@import "../apps/slick_slider/_slick-slider";
-//@import "../apps/expand_button/scss/_expand-button";
-//@import "../apps/content_filter/scss/_content-filter";
 
 @import "_header";
 @import "_main";
