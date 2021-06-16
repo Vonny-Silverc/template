@@ -1,0 +1,27 @@
+.icon-menu {
+	margin: auto;
+	@include fast-grid();
+	place-items: center;
+	width: 1.875em;
+	height: 1.875em;
+	cursor: pointer;
+	overflow: hidden;
+	z-index: 1800;
+	@include anim(0.2s, 0.1s);
+
+	&__link {
+		display: block;
+		width: 100%;
+		pointer-events: none;
+		@include for-portrait-tablet-less{ pointer-events: auto;}
+		
+		img{
+			display: block;
+			width: 95%;
+			overflow: hidden;
+			object-fit: contain;
+		}
+
+	}
+
+}

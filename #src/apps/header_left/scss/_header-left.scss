@@ -1,0 +1,131 @@
+.menu-left {
+
+	&__icon {
+		grid-area: icon;
+		pointer-events: none;
+	}
+
+	&__body {
+		grid-area: menu;
+		@include fast-inline_grid();
+		-webkit-align-items: center;
+		align-items: center;
+		grid-template-columns: repeat(7, 1fr);
+		grid-template-rows: 1fr;
+		grid-gap: 0.5em;
+		li{
+			justify-self: center;
+		}
+
+	}
+
+	&__link {
+		font-size: $font_size_desktop_6;
+		font-weight: 500;
+		line-height: 2;
+		letter-spacing: 0.075em;
+		color: $color_text_3;
+		@include anim(0.1s);
+		&:hover{ color: $color_text_4;}
+	}
+}
+
+
+.icon-menu {
+	margin: auto;
+	@include fast-grid();
+	place-items: center;
+	width: 1.875em;
+	height: 1.875em;
+	cursor: pointer;
+	overflow: hidden;
+	z-index: 1800;
+	@include anim(0.2s, 0.1s);
+
+	&__link {
+		display: block;
+		width: 100%;
+		
+		img{
+			display: block;
+			width: 95%;
+			overflow: hidden;
+			object-fit: contain;
+		}
+
+	}
+
+}
+
+@include for-portrait-tablet-less {
+	.menu-left{
+		display: block;
+		&__body{
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 30%;
+			height: 100vh;
+			background-color: $color_bg_6;
+			@include translate3d(-100%);
+			@include anim(0.2s, 0.1s);
+			&.active{@include translate3d(0);}
+
+			grid-template:
+				"...."			minmax(2em, 1fr)
+				"home"			minmax(2em, 1fr)
+				"about"			minmax(2em, 1fr)
+				"work"			minmax(2em, 1fr)
+				"process"		minmax(2em, 1fr)
+				"services"		minmax(2em, 1fr)
+				"testimonials"	minmax(2em, 1fr)
+				"contact"		minmax(2em, 1fr)
+				"...."			minmax(2em, 1fr)
+				/1fr
+			;
+			
+			li {
+				@include fast-grid();
+				-moz-justify-content: center;
+				-webkit-justify-content: center;
+				justify-content: center;
+				-webkit-align-items: center;
+				align-items: center;
+				&:nth-child(1){ grid-area: home;}
+				&:nth-child(2){ grid-area: about;}
+				&:nth-child(3){ grid-area: work;}
+				&:nth-child(4){ grid-area: process;}
+				&:nth-child(5){ grid-area: services;}
+				&:nth-child(6){ grid-area: testimonials;}
+				&:nth-child(7){ grid-area: contact;}
+			}
+		}
+
+		&__link {
+			display: block;
+			font-size: $font_size_tablet_6;
+			&:hover{ 
+				color: $color_text_4;
+			}
+		}
+
+		&__icon{
+			pointer-events: auto;
+			@include rotate(0deg);
+			@include anim(0.2s, 0.1s);
+			&.active{@include rotate(-90deg);}
+		}
+	}
+}
+
+@include for-phone-only{
+	.menu-left{
+		&__body{
+			width: 50%;
+		}
+
+		&__link{
+			font-size: $font_size_mobile_6;
+		}
+	}
+}
