@@ -1,0 +1,125 @@
+.menu {
+	&__container {
+		position: fixed;
+		top: 1.4em;
+		right: 1.4em;
+		height: 30px;
+		width: 30px;
+	}
+
+	&__body {
+		width: 80%;
+		margin: 0 auto;
+		background-color: $color_bg_2;
+		z-index: 1500;
+	}
+
+	&__list {
+		width: 40%;
+		margin: 0 auto;
+		@include fast-flex();
+		-moz-justify-content: center;
+		-webkit-justify-content: center;
+		justify-content: center;
+		li{ width: 25%;}
+	}
+
+	&__link {
+		@include anim(0.2s, 0.1s);
+		display: block;
+		width: 100%;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: $font_size_8;
+		font-weight: bold;
+		letter-spacing: 0.49px;
+		color: $color_text_3;
+		padding: 3.1em 0 2.3em 0;
+		cursor: pointer;
+		&:hover{
+			background-color: $color_bg_3;
+		}
+	}
+
+	@include for-portrait-tablet-less{
+		&__body{
+			width: 55%;
+			@include translate3d(0, -110%);
+			@include anim(0.3s, 0.1s);
+			&.active{
+				@include translate3d(0, 0);
+			}
+		}
+		&__list{
+			padding: 1em 0;
+			width: 85%;
+			flex-direction: column;
+			-webkit-align-items: center;
+			align-items: center;
+			li{
+				width: 100%;
+				border-bottom: 1px solid $color_text_3;
+				&:last-child{
+					border-bottom: none;
+				}
+			}
+		}
+
+		&__link{
+			font-size: $font_size_mobile_4;
+		}
+		
+	}
+}
+
+.icon-menu {
+	margin: auto;
+	display: none;
+	place-items: center;
+	width: 30px;
+	height: 27px;
+	cursor: pointer;
+	overflow: hidden;
+	z-index: 1800;
+	@include anim(0.2s, 0.1s);
+	span {
+		display: block;
+		width: 30px;
+		height: 3px;
+		background-color: $color_bg_3;
+		border-radius: 15%;
+		justify-self: center;
+		@include anim(0.2s, 0.1s);
+		&:nth-child(1){
+			width: 26px;
+		}
+		&:nth-child(2){
+			width: 20px;
+		}
+	}
+	&:hover{
+		span {
+			&:nth-child(1){ width: 30px;}
+			&:nth-child(2){ width: 30px;}
+		}
+	}
+	&.active {
+		span {
+			&:nth-child(1) {
+				width: 30px;
+				transform-origin: center center;
+				transform: rotate(135deg) translate(23%, -206%);
+			}
+			&:nth-child(2) {
+				width: 0px;
+			}
+			&:nth-child(3) {
+				transform-origin: center center;
+				transform: rotate(45deg) translate(-20%, -184%);
+			}
+		}
+	}
+	@include for-portrait-tablet-less{
+		display: grid;
+	}
+}
